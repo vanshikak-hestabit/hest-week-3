@@ -1,8 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import Card from "@/components/ui/Card";
 import Modal from "@/components/ui/Modal";
-import { useState } from "react";
 import TakeInput from "@/components/ui/Input";
 
 export default function HomePage() {
@@ -12,36 +12,33 @@ export default function HomePage() {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div>
+    <div className="w-full">
+      <h1 className="font-bold text-4xl mb-6">Dashboard</h1>
 
-      {/* ↓ makes the whole page a relative container so absolute works inside */}
-      
-      <h1 className="font-bold text-4xl mb-4">Dashboard</h1>
-
-      {/* CARDS COMPONENT */}
-      <div className="grid grid-cols-4 gap-6">
-        <Card
+      {/* CARDS — FIXED LAYOUT */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+        <Card classes="ransition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-xl"
           title="Primary Card"
           text="Quick summary or value"
           bg="bg-blue-800"
           onArrowClick={openModal}
         />
 
-        <Card
-          title="Sucess Card"
+        <Card classes="ransition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-xl"
+          title="Success Card"
           text="Reach the top"
           bg="bg-green-600"
           onArrowClick={openModal}
         />
 
-        <Card
+        <Card classes="ransition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-xl"
           title="Warning"
           text="What not to do"
           bg="bg-yellow-600"
           onArrowClick={openModal}
         />
 
-        <Card
+        <Card classes="ransition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-xl"
           title="Danger"
           text="View details"
           bg="bg-red-700"
@@ -51,8 +48,8 @@ export default function HomePage() {
 
       <Modal open={isModalOpen} close={closeModal} />
 
-     
-      <div className="absolute bottom-0 right-0">
+      {/* INPUT BOTTOM RIGHT */}
+      <div className="absolute bottom-4 right-4">
         <TakeInput />
       </div>
     </div>

@@ -17,28 +17,28 @@ export default function HomePage() {
 
       {/* CARDS — FIXED LAYOUT */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-        <Card classes="ransition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-xl"
+        <Card classes="transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-xl"
           title="Primary Card"
           text="Quick summary or value"
           bg="bg-blue-800"
           onArrowClick={openModal}
         />
 
-        <Card classes="ransition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-xl"
+        <Card classes="transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-xl"
           title="Success Card"
           text="Reach the top"
           bg="bg-green-600"
           onArrowClick={openModal}
         />
 
-        <Card classes="ransition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-xl"
+        <Card classes="transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-xl"
           title="Warning"
           text="What not to do"
           bg="bg-yellow-600"
           onArrowClick={openModal}
         />
 
-        <Card classes="ransition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-xl"
+        <Card classes="transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-xl"
           title="Danger"
           text="View details"
           bg="bg-red-700"

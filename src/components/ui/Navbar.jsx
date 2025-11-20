@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className="w-full bg-gray-700 text-white px-6 py-4 flex items-center justify-between"> 
 
       <div className="flex items-center gap-18">
-        <h1 className="text-2xl font-black">Start Bootstrap</h1> 
+        <h1 className="text-2xl font-black">Start Travelling</h1> 
         <span className="text-2xl cursor-pointer">☰</span>
       </div>
 

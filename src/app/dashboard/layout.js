@@ -23,17 +23,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-
-       
-        <div className="flex h-screen overflow-hidden">
-          <Sidebar />
-
-         
-          <div className="flex-1 overflow-auto p-6">
+      >  
+          <div className="p-6">
             {children}
           </div>
-        </div>
+        
       </body>
     </html>
   );

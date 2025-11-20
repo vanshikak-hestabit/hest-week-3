@@ -10,29 +10,30 @@ export default function HomePage() {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div className="relative">
+    <div className="relative w-full overflow-x-hidden">
 
       {/* ================================
-          HERO BEACH IMAGE (Enhanced)
+          HERO BEACH IMAGE (Responsive)
       ================================= */}
-      <div className="relative w-full h-[450px] overflow-hidden">
+      <div className="relative w-full h-[300px] sm:h-[380px] md:h-[450px] overflow-hidden">
 
-        {/* Image with slight zoom on hover */}
+        {/* Image */}
         <img
           src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
           alt="Beach"
           className="w-full h-full object-cover transition-transform duration-[5000ms] hover:scale-110"
         />
 
-        {/* Soft gradient overlay */}
+        {/* Gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/10"></div>
 
-        {/* Center heading with glow */}
+        {/* Heading */}
         <h1
           className="
-            absolute inset-0 flex items-center justify-center 
-            text-white font-bold text-5xl 
-            tracking-wide
+            absolute inset-0 flex items-center justify-center text-center
+            text-white font-bold 
+            text-3xl sm:text-4xl md:text-5xl
+            px-4
           "
         >
           Welcome to WanderSphere Travels
@@ -40,23 +41,22 @@ export default function HomePage() {
       </div>
 
       {/* ================================
-          TRAVEL HELP SECTION (Enhanced)
+          TRAVEL HELP SECTION
       ================================= */}
-      <div className="mt-16 text-center px-6">
-        <h2 className="text-4xl font-bold tracking-wide">
+      <div className="mt-12 text-center px-4 sm:px-6">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide">
           Having trouble planning a trip?
         </h2>
 
-        <p className="text-2xl mt-4 leading-relaxed opacity-90">
+        <p className="text-lg sm:text-xl md:text-2xl mt-4 leading-relaxed opacity-90">
           Don’t worry — let our experts design the perfect journey for you.
           From destinations to budgets, we handle everything.
         </p>
 
-        {/* Premium animated button */}
         <button
           className="
             mt-6 bg-blue-900 hover:bg-blue-700 text-white 
-            text-xl px-8 py-3 rounded-xl shadow-xl 
+            text-lg sm:text-xl px-6 sm:px-8 py-3 rounded-xl shadow-xl 
             transition-all duration-300 transform hover:scale-105
             hover:shadow-blue-500/40
           "
@@ -66,24 +66,29 @@ export default function HomePage() {
       </div>
 
       {/* ================================
-          FEATURE CARDS (Enhanced Hover)
+          RESPONSIVE FEATURE CARDS
       ================================= */}
-      <div className="flex justify-between p-6 gap-4 mt-10">
-
-        {/* Each Card wrapped in hover animation */}
+      <div
+        className="
+          grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
+          gap-4 sm:gap-6 p-4 sm:p-6 mt-10
+        "
+      >
+        {/* Card 1 */}
         <div className="transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-xl">
           <Card
-            classes="w-md"
+            classes="w-full"
             title="About Us"
             text="Know about us"
-            bg="bg-red-200"
+            bg="bg-red-300"
             onArrowClick={openModal}
           />
         </div>
 
+        {/* Card 2 */}
         <div className="transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-xl">
           <Card
-            classes="w-md"
+            classes="w-full"
             title="Where to go?"
             text="Best for you"
             bg="bg-blue-300"
@@ -91,26 +96,27 @@ export default function HomePage() {
           />
         </div>
 
+        {/* Card 3 */}
         <div className="transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-xl">
           <Card
-            classes="w-md"
+            classes="w-full"
             title="Family, Solo & Friends"
             text="Customise your package"
-            bg="bg-orange-200"
+            bg="bg-orange-300"
             onArrowClick={openModal}
           />
         </div>
 
+        {/* Card 4 */}
         <div className="transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-xl">
           <Card
-            classes="w-md"
+            classes="w-full"
             title="Meet Us"
             text="Contact"
             bg="bg-green-300"
             onArrowClick={openModal}
           />
         </div>
-
       </div>
 
       <Modal open={isModalOpen} close={closeModal} content={""} />

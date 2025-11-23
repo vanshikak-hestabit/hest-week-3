@@ -12,9 +12,7 @@ export default function HomePage() {
   return (
     <div className="relative w-full overflow-x-hidden">
 
-      {/* ================================
-          HERO BEACH IMAGE (Responsive)
-      ================================= */}
+      {/* HERO SECTION*/}
       <div className="relative w-full h-[300px] sm:h-[380px] md:h-[450px] overflow-hidden">
 
         {/* Image */}
@@ -40,9 +38,7 @@ export default function HomePage() {
         </h1>
       </div>
 
-      {/* ================================
-          TRAVEL HELP SECTION
-      ================================= */}
+      {/* INTRO*/}
       <div className="mt-12 text-center px-4 sm:px-6">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide">
           Having trouble planning a trip?
@@ -65,9 +61,6 @@ export default function HomePage() {
         </button>
       </div>
 
-      {/* ================================
-          RESPONSIVE FEATURE CARDS
-      ================================= */}
       <div
         className="
           grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
@@ -120,6 +113,12 @@ export default function HomePage() {
       </div>
 
       <Modal open={isModalOpen} close={closeModal} content={""} />
+
+      <footer className="mt-16 w-full bg-gray-800 text-white py-6 text-center">
+        <p className="text-lg">© 2025 WanderSphere Travels</p>
+        <p className="opacity-80 text-sm mt-1">Explore. Experience. Enjoy.</p>
+
+      </footer>
     </div>
   );
 }

@@ -1,8 +1,12 @@
+"use client"
+import { useRouter } from "next/navigation";
+
 export default function ProfilePage() {
+  const router = useRouter();
   return (
     <div className="w-full min-h-screen bg-gray-100 overflow-x-hidden">
 
-      {/* ---- TOP BANNER ---- */}
+      {/*TOP BANNER*/}
       <div
         className="w-full h-64 bg-cover bg-center bg-no-repeat"
         style={{
@@ -11,7 +15,7 @@ export default function ProfilePage() {
         }}
       ></div>
 
-      {/* ---- PROFILE CARD ---- */}
+      {/*PROFILE CARD */}
       <div className="w-[92%] mx-auto -mt-20 bg-white p-6 rounded-xl shadow-md">
 
         {/* Profile Image */}
@@ -57,7 +61,8 @@ export default function ProfilePage() {
               </span>
             </p>
           </div>
-          <button className="mt-6 px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+          <button className="mt-6 px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+            onClick = {() => router.push("/login")}>
             Plan a Trip With Me
           </button>
 

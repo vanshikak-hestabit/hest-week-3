@@ -114,7 +114,8 @@ export default function HomePage() {
 
       <Modal open={isModalOpen} close={closeModal} content={""} />
 
-      <footer className="mt-16 w-full bg-gray-800 text-white py-6 text-center">
+    {/* FOOTER */}
+      <footer className="mt-auto w-full bg-gray-800 text-white py-5 text-center">
         <p className="text-lg">© 2025 WanderSphere Travels</p>
         <p className="opacity-80 text-sm mt-1">Explore. Experience. Enjoy.</p>
 

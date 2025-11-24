@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import { FaTachometerAlt, FaRegFileAlt, FaChartBar, FaTable } from "react-icons/fa";
+import { FaTachometerAlt,FaHome, FaRegFileAlt, FaChartBar, FaTable } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
 
@@ -13,10 +13,18 @@ const Sidebar = () => {
 
         {/* CORE */}
         <p className="text-gray-500 text-xl mb-3">Core</p>
-        <div className="flex items-center gap-3 text-xl mb-8 cursor-pointer"
-            onClick={() => router.push("/dashboard")}>
-            <FaTachometerAlt/>
-            <span>Dashboard</span>
+        <div>
+            <div className="flex items-center gap-3 text-xl mb-8 cursor-pointer"
+                onClick={() => router.push("/dashboard")}>
+                <FaTachometerAlt/>
+                <span>Dashboard</span>
+            </div>
+
+            <div className="flex items-center gap-3 text-xl mb-8 cursor-pointer"
+                onClick={() => router.push("/")}>
+                <FaHome/>
+                <span>Home</span>
+            </div>            
         </div>
 
         {/* INTERFACE */}

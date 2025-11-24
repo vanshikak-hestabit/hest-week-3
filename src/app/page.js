@@ -2,8 +2,10 @@
 import Modal from "@/components/ui/Modal";
 import Card from "@/components/ui/Card";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function HomePage() {
+  const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
@@ -50,6 +52,7 @@ export default function HomePage() {
         </p>
 
         <button
+          onClick={() => router.push("/login")}
           className="
             mt-6 bg-blue-900 hover:bg-blue-700 text-white 
             text-lg sm:text-xl px-6 sm:px-8 py-3 rounded-xl shadow-xl 

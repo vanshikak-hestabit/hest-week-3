@@ -1,15 +1,20 @@
+"use client"
 import React from 'react'
 import { FaTachometerAlt, FaRegFileAlt, FaChartBar, FaTable } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import { useRouter } from 'next/navigation';
 
 
 const Sidebar = () => {
+    const router = useRouter();
   return (
+   
     <div className="w-80 bg-gray-800 text-white p-9 flex-shrink-0 overflow-y-auto">
 
         {/* CORE */}
         <p className="text-gray-500 text-xl mb-3">Core</p>
-        <div className="flex items-center gap-3 text-xl mb-8 cursor-pointer">
+        <div className="flex items-center gap-3 text-xl mb-8 cursor-pointer"
+            onClick={() => router.push("/dashboard")}>
             <FaTachometerAlt/>
             <span>Dashboard</span>
         </div>

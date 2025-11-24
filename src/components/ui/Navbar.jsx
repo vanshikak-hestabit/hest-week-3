@@ -1,8 +1,9 @@
 'use client'
-
+import {useRouter} from 'next/navigation'
 import React from 'react'
 
 const Navbar = () => {
+  const router = useRouter();
   return (
 
     <div className="w-full bg-gray-700 text-white px-6 py-4 flex items-center justify-between"> 
@@ -21,8 +22,8 @@ const Navbar = () => {
           />
         </div>
         
-        <div className="flex items-center justify-center cursor-pointer">
-            <span className=
+        <div className="flex items-center justify-center cursor-pointer"
+         onClick ={() => router.push("/dashboard/profile")}>            <span className=
             "text-xl">👤</span> 
         </div>
       </div>

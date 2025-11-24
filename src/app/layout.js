@@ -26,9 +26,9 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
 
-        <div className="flex">
+        <div className="flex min-h-screen overflow-hidden">
           <Sidebar />
-          <main className="p-6 w-full">{children}</main>
+          <main className="p-6 w-full overflow-y-auto flex flex-col">{children}</main>
         </div>
       </body>
     </html>

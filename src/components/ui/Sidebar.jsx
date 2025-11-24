@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
-    <div className="w-80 h-screen bg-gray-800 text-white p-9">
+    <div className="w-80 bg-gray-800 text-white p-9 flex-shrink-0 overflow-y-auto">
 
         {/* CORE */}
         <p className="text-gray-500 text-xl mb-3">Core</p>

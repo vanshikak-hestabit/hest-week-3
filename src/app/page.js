@@ -28,14 +28,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/10"></div>
 
         {/* Heading */}
-        <h1
-          className="
-            absolute inset-0 flex items-center justify-center text-center
-            text-white font-bold 
-            text-3xl sm:text-4xl md:text-5xl
-            px-4
-          "
-        >
+        <h1 className="absolute inset-0 flex items-center justify-center text-center text-white font-bold text-3xl sm:text-4xl md:text-5xl px-4" >
           Welcome to WanderSphere Travels
         </h1>
       </div>
@@ -51,25 +44,12 @@ export default function HomePage() {
           From destinations to budgets, we handle everything.
         </p>
 
-        <button
-          onClick={() => router.push("/login")}
-          className="
-            mt-6 bg-blue-900 hover:bg-blue-700 text-white 
-            text-lg sm:text-xl px-6 sm:px-8 py-3 rounded-xl shadow-xl 
-            transition-all duration-300 transform hover:scale-105
-            hover:shadow-blue-500/40
-          "
-        >
+        <button onClick={() => router.push("/login")} className="mt-6 bg-blue-900 hover:bg-blue-700 text-white text-lg sm:text-xl px-6 sm:px-8 py-3 rounded-xl shadow-xl transition-all duration-300 transform hover:scale-105hover:shadow-blue-500/40">
           Book With Us
         </button>
       </div>
 
-      <div
-        className="
-          grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
-          gap-4 sm:gap-6 p-4 sm:p-6 mt-10
-        "
-      >
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 p-4 sm:p-6 mt-10">
         {/* Card 1 */}
         <div className="transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl rounded-xl">
           <Card
